@@ -31,10 +31,18 @@ console.log(num.toFixed(2).replace(/\B(?=(\d{3})+\b)/, ',').replace(/^/, '$ '));
 
 //密码验证  密码长度 6-12 位，由数字、小写字符和大写字母组成，但必须至少包括 2 种字符。
 //必须包含数字  (?=.*[0-9])   必须包含小写字母  (?=.*[a-z)    必须包含大写  (?=.*[A-Z])
+/*
 let regex = /((?=.*[0-9])(?=.*[a-z)|(?=.*[a-z)(?=.*[A-Z])|(?=.*[A-Z])(?=.*[0-9]))^[0-9a-zA-Z]{6,12}$/;
 console.log( regex.test("1234567") ); // false 全是数字
 console.log( regex.test("abcdef") ); // false 全是小写字母
 console.log( regex.test("ABCDEFGH") ); // false 全是大写字母
 console.log( regex.test("ab23C") ); // false 不足6位
 console.log( regex.test("ABCDEF234") ); // true 大写字母和数字
-console.log( regex.test("abcdEF234") ); // true 三者都有
+console.log( regex.test("abcdEF234") ); // true 三者都有*/
+
+
+let string = '1150018.38657';
+ //console.log(string.replace(/\B(?=(\d{3})+\.)/g, ','));/\d(?=(?:\d{3})+(?:\.|$))/g,"$&,"
+console.log(string.replace(/\d(?=(?:\d{3})+(?:\.|$))/g, '$&,'));
+//console.log(string.replace(/\B(?=(\d{3})+(((?=\d+)[.])[.]|((?!\d+)[.])$))/g, ','));
+//console.log(string.replace(/\B(?=(\d{3})+([.]|$))/g, ','));

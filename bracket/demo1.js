@@ -138,10 +138,11 @@ function escapeHTML (str) {
 console.log( escapeHTML('<div>Blah blah blah</div>') );*/
 
 //匹配成对标签
+/*
 let regex = /^<([^>]+)>[\d\D]*<\/\1>$/;
 let string1 = "<title>regular expression</title>";
 let string2 = "<p>laoyao bye bye</p>";
 let string3 = "<title>wrong!</p>";
 console.log( regex.test(string1) ); // true
 console.log( regex.test(string2) ); // true
-console.log( regex.test(string3) ); // false
+console.log( regex.test(string3) ); // false*/
